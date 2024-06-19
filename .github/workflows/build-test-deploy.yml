@@ -1,7 +1,7 @@
 name: build deploy and test application
 on: push
 jobs:
-  checkout repository to download files:
+  checkout-repository-download-files:
     runs-on: ubuntu-latest
     steps:
     - name: checkout the repository
