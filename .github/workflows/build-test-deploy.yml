@@ -1,7 +1,7 @@
 name: build deploy and test application
 on: push
 jobs:
-  checkout-repository-download-files:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: checkout the repository
@@ -12,5 +12,16 @@ jobs:
         node-version: '18.x'
     - run: npm install
     - run: npm run build
-      
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout the repository
+      uses: actions/checkout@v4
+    - name: test node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+    - run: npm install
+    - run: npm run test
     
