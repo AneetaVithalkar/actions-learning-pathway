@@ -6,4 +6,4 @@ jobs:
  steps:
  - name: checkoutgithubactions
    uses: actions/checkout@v4
-   run: cat "$(echo helloworld.txt)"
+   run: cat "$(echo hello_world.txt)"
