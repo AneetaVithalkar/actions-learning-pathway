@@ -1,9 +1,9 @@
 name: revision
 on: push
 jobs:
- name: helloworld
- runs-on: ubuntu-latest
- steps:
- - name: checkoutgithubactions
-   uses: actions/checkout@v4
-   run: cat "$(echo hello_world.txt)"
+ helloworld:
+  runs-on: ubuntu-latest
+  steps:
+  - name: checkoutgithubactions
+    uses: actions/checkout@v4
+  - run: cat "$(echo hello_world.txt)"
