@@ -31,7 +31,7 @@ jobs:
         SERVER_NAME: gihtubactions
         ADMIN_LOGIN: sarah
       run: >
-        powershell -command "& '${{ env.OUTPUT_PATH }}/IaC/AzCLI/vmcreation.ps1'" 
+        pwsh -command "& '${{ env.OUTPUT_PATH }}/IaC/AzCLI/vmcreation.ps1'" 
         -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_APPID }}
         -servicePrincipalSecret ${{ secrets.SERVICE_PRINCIPAL_SECRET }} 
         -servicePrincipalTenantId ${{ secrets.SERVICE_PRINCIPAL_TENANTID }} 
