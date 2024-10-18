@@ -6,4 +6,4 @@ jobs:
      steps:
        - name: Check out Repository Code
          uses: actions/checkout@v3
-       - run: uname -a && hostname && df -kh
+       - run: cat hello-world.txt
