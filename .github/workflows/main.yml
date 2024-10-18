@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: run basic linux commands
+      uses: actions/checkout@v3
     - run: uname -a 
     - run: ps -ef | grep -i systemd
     - run: echo "Learn github for CI/CD"
