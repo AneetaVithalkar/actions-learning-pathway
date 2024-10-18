@@ -1,0 +1,10 @@
+name: test Knowledge of github basics
+on: push
+jobs:
+  run-basic-linux-commands:
+    runs-on: ubuntu-latest
+    steps:
+    - name: run basic linux commands
+    - run: uname -a 
+    - run: ps -ef | grep -i systemd
+    - run: echo "Learn github for CI/CD"
